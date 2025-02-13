@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>算法-回溯</title>
+    <link href="/2025/02/13/%E7%AE%97%E6%B3%95-%E5%9B%9E%E6%BA%AF/"/>
+    <url>/2025/02/13/%E7%AE%97%E6%B3%95-%E5%9B%9E%E6%BA%AF/</url>
+    
+    <content type="html"><![CDATA[<h2 id="子集型回溯-组合型回溯"><a href="#子集型回溯-组合型回溯" class="headerlink" title="子集型回溯&#x2F;组合型回溯"></a>子集型回溯&#x2F;组合型回溯</h2><p>每个元素<strong>选或者不选</strong></p><p><strong>方法1 输入的视角（选或不选）</strong></p><p><img src="https://cdn.nlark.com/yuque/0/2025/png/35069679/1738936758608-400e8f86-677b-4890-8f25-781633ac6a0b.png?x-oss-process=image/format,webp/resize,w_937,limit_0" alt="image.png"></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c++">vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; res;<br>vector&lt;<span class="hljs-type">int</span>&gt; path;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> </span>&#123;<br>    <span class="hljs-keyword">if</span> (i == nums.<span class="hljs-built_in">size</span>()) &#123; <span class="hljs-comment">// 递归边界</span><br>        res.<span class="hljs-built_in">push_back</span>(path); <span class="hljs-comment">// 加入答案</span><br>        <span class="hljs-keyword">return</span>; <span class="hljs-comment">// 返回上一层</span><br>    &#125;<br>    <span class="hljs-comment">// 选</span><br>    path.<span class="hljs-built_in">push_back</span>(nums[i]); <br>    <span class="hljs-built_in">dfs</span>(i + <span class="hljs-number">1</span>); <span class="hljs-comment">// 递归下一层</span><br>    path.<span class="hljs-built_in">pop_back</span>(); <span class="hljs-comment">// 恢复现场</span><br>    <br>    <span class="hljs-comment">// 不选</span><br>    <span class="hljs-built_in">dfs</span>(i + <span class="hljs-number">1</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="校园交友平台"><a href="#校园交友平台" class="headerlink" title="校园交友平台"></a>校园交友平台</h2><p>项目介绍：</p><p>技术栈：Vue3 + SpringBoot + Mybatis-Plus + Sa-token + Redis</p><p>项目地址：<a href="https://github.com/yhz1651/campus-partner">https://github.com/yhz1651/campus-partner</a></p><h2 id="航天五院态势感知项目"><a href="#航天五院态势感知项目" class="headerlink" title="航天五院态势感知项目"></a>航天五院态势感知项目</h2><p>项目介绍：</p><p>技术栈：Vue + Flask</p><p>项目地址：<a href="https://github.com/yhz1651/situation_awareness">https://github.com/yhz1651/situation_awareness</a></p><h2 id="Android音乐APP"><a href="#Android音乐APP" class="headerlink" title="Android音乐APP"></a>Android音乐APP</h2><p>项目介绍：</p><p>技术栈：Android + SpringBoot</p><p>项目地址：</p><ul><li>Android端：<a href="https://github.com/yhz1651/MusicApp">https://github.com/yhz1651/MusicApp</a></li><li>后端：<a href="https://github.com/yhz1651/MusicApp-backend">https://github.com/yhz1651/MusicApp-backend</a></li></ul><h2 id="图书管理系统"><a href="#图书管理系统" class="headerlink" title="图书管理系统"></a>图书管理系统</h2><p>项目介绍：</p><p>技术栈：Vue2 + SpringBoot + Mybatis</p><p>项目地址：<a href="https://github.com/yhz1651/library_management">https://github.com/yhz1651/library_management</a></p><h2 id="研究生推免系统"><a href="#研究生推免系统" class="headerlink" title="研究生推免系统"></a>研究生推免系统</h2><p>项目介绍：</p><p>技术栈：Bootstrap + SpringBoot</p><p>项目地址：<a href="https://github.com/yhz1651/tuimian">https://github.com/yhz1651/tuimian</a></p><p><img src="/images/test.png" alt="浙江大学"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试文章</title>
     <link href="/2025/02/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2025/02/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
