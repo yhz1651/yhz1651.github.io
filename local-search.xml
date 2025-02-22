@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>leetcode-hot100-双指针</title>
+    <link href="/2025/02/22/leetcode_hot100_doublepointer/"/>
+    <url>/2025/02/22/leetcode_hot100_doublepointer/</url>
+    
+    <content type="html"><![CDATA[<h1 id="283-移动零"><a href="#283-移动零" class="headerlink" title="283. 移动零"></a><a href="https://leetcode-cn.com/problems/move-zeroes/">283. 移动零</a></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">moveZeroes</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-type">int</span> l = <span class="hljs-number">0</span>;  <span class="hljs-comment">// 左指针，指向下一个非零元素应存放的位置</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> r = <span class="hljs-number">0</span>; r &lt; n; r++) &#123;  <span class="hljs-comment">// 右指针扩展窗口</span><br>            <span class="hljs-keyword">if</span> (nums[r]) &#123;<br>                <span class="hljs-built_in">swap</span>(nums[l], nums[r]);  <span class="hljs-comment">// 交换非零元素和左边界</span><br>                l++;  <span class="hljs-comment">// 扩展左边界</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>项目作品集</title>
     <link href="/2025/02/17/yhz_project/"/>
     <url>/2025/02/17/yhz_project/</url>
