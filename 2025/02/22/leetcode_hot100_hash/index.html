@@ -19,15 +19,15 @@
   <meta name="author" content="yanghaozhe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. 两数之和12345678910111213class Solution &#123;public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) &#123;        unordered_map&lt;int, int&gt; hash;        for (int i &#x3D; 0; i &amp;lt">
+    <meta name="description" content="1. 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那两个整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。 你可以按任意顺序返回答案。 示例 1：  输入：nums &#x3D; [2,7,11,15], target &#x3D; 9 输出：[0,1] 解释：因为 nums[0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode-hot100-哈希">
 <meta property="og:url" content="https://yhz1651.github.io/2025/02/22/leetcode_hot100_hash/index.html">
 <meta property="og:site_name" content="Yhz&#39;s Blog">
-<meta property="og:description" content="1. 两数之和12345678910111213class Solution &#123;public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) &#123;        unordered_map&lt;int, int&gt; hash;        for (int i &#x3D; 0; i &amp;lt">
+<meta property="og:description" content="1. 两数之和给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那两个整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。 你可以按任意顺序返回答案。 示例 1：  输入：nums &#x3D; [2,7,11,15], target &#x3D; 9 输出：[0,1] 解释：因为 nums[0">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-22T14:35:20.000Z">
-<meta property="article:modified_time" content="2025-02-22T14:08:23.987Z">
+<meta property="article:modified_time" content="2025-02-22T14:15:03.686Z">
 <meta property="article:author" content="yanghaozhe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          242 字
+          429 字
         
       </span>
     
@@ -246,7 +246,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -358,7 +358,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-02-22T22:08:23+08:00
+                    本文最后更新于 2025-02-22T22:15:03+08:00
                   
                   
 
@@ -368,7 +368,34 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/">1. 两数之和</a></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; hash;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">auto</span> it = hash.<span class="hljs-built_in">find</span>(target - nums[i]);<br>            <span class="hljs-keyword">if</span> (it != hash.<span class="hljs-built_in">end</span>())<br>                <span class="hljs-keyword">return</span> &#123;it-&gt;second, i&#125;;<br>            hash[nums[i]] = i;<br>        &#125;<br>        <span class="hljs-keyword">return</span> &#123;&#125;;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/">1. 两数之和</a></h1><p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 和为目标值 <code>target</code>  的那两个整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p>示例 1：</p>
+<blockquote>
+<p>输入：nums &#x3D; [2,7,11,15], target &#x3D; 9</p>
+<p>输出：[0,1]</p>
+<p>解释：因为 nums[0] + nums[1] &#x3D;&#x3D; 9 ，返回 [0, 1] 。</p>
+</blockquote>
+<p>示例 2：</p>
+<blockquote>
+<p>输入：nums &#x3D; [3,2,4], target &#x3D; 6</p>
+<p>输出：[1,2]</p>
+</blockquote>
+<p>示例 3：</p>
+<blockquote>
+<p>输入：nums &#x3D; [3,3], target &#x3D; 6</p>
+<p>输出：[0,1]</p>
+</blockquote>
+<p>提示：</p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 104</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
+<li>只会存在一个有效答案</li>
+</ul>
+<p>代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; hash;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">auto</span> it = hash.<span class="hljs-built_in">find</span>(target - nums[i]);<br>            <span class="hljs-keyword">if</span> (it != hash.<span class="hljs-built_in">end</span>())<br>                <span class="hljs-keyword">return</span> &#123;it-&gt;second, i&#125;;<br>            hash[nums[i]] = i;<br>        &#125;<br>        <span class="hljs-keyword">return</span> &#123;&#125;;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <h1 id="49-字母异位词分组"><a href="#49-字母异位词分组" class="headerlink" title="49. 字母异位词分组"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/group-anagrams/">49. 字母异位词分组</a></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;string&gt;&gt; <span class="hljs-built_in">groupAnagrams</span>(vector&lt;string&gt;&amp; strs) &#123;<br>        unordered_map&lt;string, vector&lt;string&gt;&gt; hash;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> s : strs) &#123;<br>            string key = s;<br>            <span class="hljs-built_in">sort</span>(key.<span class="hljs-built_in">begin</span>(), key.<span class="hljs-built_in">end</span>());<br>            hash[key].<span class="hljs-built_in">push_back</span>(s);<br>        &#125;<br>        vector&lt;vector&lt;string&gt;&gt; res;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> [x, y] : hash) &#123;<br>            res.<span class="hljs-built_in">push_back</span>(y);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
